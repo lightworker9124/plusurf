@@ -13,17 +13,7 @@ $google = s("socialauth/google");
 					<div style="margin-top: 40px; text-align: <?php echo Languages::text_align(); ?>" >
                     <?php _s("ads/header"); ?>
 							<?php include("alerts.php"); ?>
-							<div class="12u 12u(mobile)">
-                            <?php if(!empty($facebook["id"]) && !empty($facebook["secret"])) { ?>
-									<a href="Javascript::void();" onclick="window.location = '<?php _router("social_connect"); ?>?access=Facebook'; " class="btn fg-white" style="background-color: #4A67A0;"  ><i class="fg-white fa fa-facebook" ></i> Facebook</a></li>
-                            <?php } ?>
-                            <?php if(!empty($twitter["key"]) && !empty($twitter["secret"])) { ?>
-                                    <a href="Javascript::void();" onclick="window.location = '<?php _router("social_connect"); ?>?access=Twitter'; " class="btn fg-white" style="background-color: #1DA3F2;"  ><i class="fg-white fa fa-twitter" ></i> Twitter</a></li>
-                            <?php } ?>
-                            <?php if(!empty($google["id"]) && !empty($google["secret"])) { ?>
-                                    <a href="Javascript::void();" onclick="window.location = '<?php _router("social_connect"); ?>?access=Google'; " class="btn fg-white" style="background-color: #D73A32;"  ><i class="fg-white fa fa-google-plus" ></i> Google</a></li>
-                            <?php } ?>
-                            </div>
+						
                             <hr>
 							<div id="signup_alert"></div>
 							<form id="signup_form" method="post" action="<?php _router("signup"); ?>">
