@@ -1,0 +1,13 @@
+Time : 05:57:26
+SQL ERROR : SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty
+
+
+Time : 05:31:56
+SQL ERROR : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT * FROM exchange WHERE ip = ? and status = ?' at line 1
+ Raw SQL : SELECT COUNT(id) FROM SELECT * FROM exchange WHERE ip = :ip and status = :status
+
+
+Time : 05:31:51
+SQL ERROR : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT * FROM exchange WHERE ip = ? and status = ?' at line 1
+ Raw SQL : SELECT COUNT(id) FROM SELECT * FROM exchange WHERE ip = :ip and status = :status
+

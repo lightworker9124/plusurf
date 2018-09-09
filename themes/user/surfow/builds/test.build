@@ -1,0 +1,6 @@
+				<div class="eachone">
+					<a href=":url:" title=":fullname:" >
+						<img src=":avatar:" alt=":fullname:" >
+						<div class="title no-phone no-tablet" ><i class="fa fa-user"></i> :username:</div>
+					</a>
+				</div>

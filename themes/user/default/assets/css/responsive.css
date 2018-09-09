@@ -1,0 +1,112 @@
+/*
+ * Devices
+ * min 1200
+ * min 1024
+ * max 1024
+ * max 768
+ * max 640
+ * max 480
+ * max 320
+ */
+/* Desktop */
+@media screen and (min-width: 800px) {
+  .no-desktop {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .no-desktop {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .on-desktop {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+
+/* tablet landscape*/
+@media only screen and (max-width: 1024px) {
+  .no-tablet-landscape,
+  .no-tablet {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .on-tablet {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+/* tablet portrait */
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 60%;
+  }
+  .no-tablet-portrait,
+  .no-tablet {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .on-tablet {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+
+/* Phones landscape*/
+@media only screen and (max-width: 640px) {
+  html {
+    font-size: 60%;
+  }
+  .no-phone-landscape,
+  .no-phone {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .on-phone {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+/* Phones portrait*/
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 45%;
+  }
+  .no-phone-landscape,
+  .no-phone {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  html {
+    font-size: 40%;
+  }
+  .no-phone-portrait,
+  .no-phone {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  html {
+    font-size: 40%;
+  }
+  .no-phone-portrait,
+  .no-phone {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+#realtime_url {
+    width: 90% !important;
+    word-wrap: none;
+}
+#realtime_url:after {
+    content: '...';
+}

@@ -1,0 +1,92 @@
+				  <form id="update_website_form" action=":urlform:" method="post" >
+				  <input type="hidden" value=":website_id:" name="update_website_id" /> 
+				  <div class="modal-body">
+						<div class="form-group">
+						  <label class="control-label" for="inputDefault">:web_address:</label>
+						  <input class="form-control"  name="update_website_url" placeholder=":web_example_url:" value=":url_value:" id="inputDefault" type="text" required>
+						</div>
+						<hr>
+						<div class="form-group">
+							<label class="control-label" for="inputDefault">:visit_duration:</label>
+							<input type="text" id="seconds_range2" name="update_website_seconds" value=":duration_value:" />
+						</div>
+						<div class="form-group">
+							<div class="row" >
+								<div class="5u" ><center><b id="calcul_points2" ></b> :point:</center></div>
+								<div class="2u" ><center><i class="icon fa-exchange"></i></center></div>
+								<div class="5u" ><center><b id="calcul_visitors2"></b> :visitor:</center></div>
+							</div>
+						</div>
+						<hr>
+						<div class="form-group">
+							<label class="control-label" for="inputDefault">:max_per_hour:</label>
+							<input type="text" id="website_hour_max2" name="update_website_hour_max" value=":max_hour_value:" />
+						</div>
+						<hr>
+						<div id="disabled_update_content_inside" >
+						<div class="form-group">
+						<label class="control-label">:traffic_source:</label>
+						<select  class="control-label" name="update_source_select" id="update_source_select" >
+						:source_options:
+						</select>
+						</div>	
+						<div id="update_website_source_link" style="display: none;"  class="form-group">
+						  <label class="control-label" for="inputDefault">:web_address:</label>
+						  <div>
+						  <a href="Javascript::void(0)" onclick="$('#update_website_source').val('https://www.facebook.com');" class="btn btn-primary" ><i class="fa fa-facebook" ></i></a>
+						  <a href="Javascript::void(0)" onclick="$('#update_website_source').val('https://twitter.com');" class="btn btn-primary" ><i class="fa fa-twitter" ></i></a>
+						  <a href="Javascript::void(0)" onclick="$('#update_website_source').val('https://www.youtube.com');" class="btn btn-primary" ><i class="fa fa-youtube" ></i></a>
+						  <a href="Javascript::void(0)" onclick="$('#update_website_source').val('https://plus.google.com');" class="btn btn-primary" ><i class="fa fa-google-plus" ></i></a>
+						  <a href="Javascript::void(0)" onclick="$('#update_website_source').val('https://www.google.com');" class="btn btn-primary" ><i class="fa fa-search" ></i></a>
+						  <a href="Javascript::void(0)" onclick="$('#update_website_source').val('https://www.linkedin.com');" class="btn btn-primary" ><i class="fa fa-linkedin" ></i></a>
+						  <a href="Javascript::void(0)" onclick="$('#update_website_source').val('http://www.amazon.com');" class="btn btn-primary" ><i class="fa fa-amazon" ></i></a>
+						  <a href="Javascript::void(0)" onclick="$('#update_website_source').val('https://www.reddit.com');" class="btn btn-primary" ><i class="fa fa-reddit" ></i></a>
+						  <a href="Javascript::void(0)" onclick="$('#update_website_source').val('https://vimeo.com');" class="btn btn-primary" ><i class="fa fa-vimeo" ></i></a>
+						  </div>
+						  <br>
+						  <input class="form-control" name="update_website_source" value=":source:" placeholder=":web_example_url:>" id="update_website_source" type="text" >
+						</div>
+						<hr>
+						</div>
+						<div class="form-group">
+							<label class="control-label">:limit_total_hits:</label>
+							<div>
+							  <div class="radio">
+								<label>
+								  <input name="update_website_limit" id="website_limit1" value="off" :checked1: type="radio">
+								  :unlimited:
+								</label>
+							  </div>
+							  <div class="radio">
+								<label>
+								  <input name="update_website_limit" id="website_limit2" value="on" :checked2:  type="radio">
+								  :limited:
+								</label>
+								 <input value=":total_value:" type="text" style="width: 150px; :sm_input_display:" id="website_total2" class="input-sm" name="update_website_limit_value" value="20" />
+							  </div>
+							</div>
+						</div>
+                        <div id="disabled_update_content_inside2" >
+                        <hr>
+                            <div class="form-group">
+                              <label class="control-label" >:lng_geo_target:</label>
+                              <select multiple="multiple" id="gettarget-update" name="geo_target[]">
+                              :select_location:
+                              </select>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label class="control-label" >:lng_user_agent:</label>
+                            <select class="control-label" name="user_agent" >
+                              :select_useragent:
+                            </select>
+                        </div>
+						<hr>
+						<div id="update_website_alert" ></div>
+				  </div>
+				  <div class="modal-footer">
+				    <button type="submit" class="btn btn-success" >:update:</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">:close:</button>
+				  </div>
+				  </form>

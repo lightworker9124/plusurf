@@ -1,0 +1,67 @@
+Time : 23:09:02
+SQL ERROR : SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value
+ Raw SQL : INSERT INTO exchange(`user_id`, `lasturl_id`, `accepted_time`, `last_run`, `closed`, `status`, `created_at`, `updated_at`) VALUES(:uid, '', '', :lastrun, '0', '1', :cat, :uat)
+
+
+Time : 23:08:42
+SQL ERROR : SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value
+ Raw SQL : INSERT INTO exchange(`user_id`, `lasturl_id`, `accepted_time`, `last_run`, `closed`, `status`, `created_at`, `updated_at`) VALUES(:uid, '', '', :lastrun, '0', '1', :cat, :uat)
+
+
+Time : 22:54:34
+SQL ERROR : SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value
+ Raw SQL : INSERT INTO exchange(`user_id`, `lasturl_id`, `accepted_time`, `last_run`, `closed`, `status`, `created_at`, `updated_at`) VALUES(:uid, '', '', :lastrun, '0', '1', :cat, :uat)
+
+
+Time : 22:23:02
+SQL ERROR : SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value
+ Raw SQL : INSERT INTO exchange(`user_id`, `lasturl_id`, `accepted_time`, `last_run`, `closed`, `status`, `created_at`, `updated_at`) VALUES(:uid, '', '', :lastrun, '0', '1', :cat, :uat)
+
+
+Time : 22:17:56
+SQL ERROR : SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value
+ Raw SQL : INSERT INTO exchange(`user_id`, `lasturl_id`, `accepted_time`, `last_run`, `closed`, `status`, `created_at`, `updated_at`) VALUES(:uid, '', '', :lastrun, '0', '1', :cat, :uat)
+
+
+Time : 22:12:53
+SQL ERROR : SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value
+ Raw SQL : INSERT INTO exchange(`user_id`, `lasturl_id`, `accepted_time`, `last_run`, `closed`, `status`, `created_at`, `updated_at`) VALUES(:uid, '', '', :lastrun, '0', '1', :cat, :uat)
+
+
+Time : 21:49:32
+SQL ERROR : SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value
+ Raw SQL : INSERT INTO exchange(`user_id`, `lasturl_id`, `accepted_time`, `last_run`, `closed`, `status`, `created_at`, `updated_at`) VALUES(:uid, '', '', :lastrun, '0', '1', :cat, :uat)
+
+
+Time : 21:49:14
+SQL ERROR : SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value
+ Raw SQL : INSERT INTO exchange(`user_id`, `lasturl_id`, `accepted_time`, `last_run`, `closed`, `status`, `created_at`, `updated_at`) VALUES(:uid, '', '', :lastrun, '0', '1', :cat, :uat)
+
+
+Time : 21:45:57
+SQL ERROR : SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value
+ Raw SQL : INSERT into `users` (`username`, `email`, `password`, `website_slots`, `session_slots`, `traffic_ratio`, `points`, `status`, `activation_key`, `created_at`, `updated_at`) VALUES (:username, :email, :password, :websites, :sessions, :tratio, :points, :status, :activation, :createdat, :updatedat);
+
+
+Time : 21:44:46
+SQL ERROR : SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value
+ Raw SQL : INSERT into `users` (`username`, `email`, `password`, `website_slots`, `session_slots`, `traffic_ratio`, `points`, `status`, `activation_key`, `created_at`, `updated_at`) VALUES (:username, :email, :password, :websites, :sessions, :tratio, :points, :status, :activation, :createdat, :updatedat);
+
+
+Time : 21:44:29
+SQL ERROR : SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value
+ Raw SQL : INSERT into `users` (`username`, `email`, `password`, `website_slots`, `session_slots`, `traffic_ratio`, `points`, `status`, `activation_key`, `created_at`, `updated_at`) VALUES (:username, :email, :password, :websites, :sessions, :tratio, :points, :status, :activation, :createdat, :updatedat);
+
+
+Time : 21:14:27
+SQL ERROR : SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value
+ Raw SQL : INSERT INTO `admins` (`username`, `email`, `password`, `status`, `created_at`, `updated_at`) VALUES (:username, :email, :password, :status, :created_at, :updated_at)
+
+
+Time : 21:14:00
+SQL ERROR : SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value
+ Raw SQL : INSERT INTO `admins` (`username`, `email`, `password`, `status`, `created_at`, `updated_at`) VALUES (:username, :email, :password, :status, :created_at, :updated_at)
+
+
+Time : 21:09:01
+SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)

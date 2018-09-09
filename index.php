@@ -1,0 +1,111 @@
+<?php
+/*
+|---------------------------------------------------------------
+| PHP FRAMEWORK
+|---------------------------------------------------------------
+|
+| -> PACKAGE / PHP FRAMEWORK
+| -> AUTHOR / wesparkle solutions
+| -> DATE / 2015-04-01
+| -> CODECANYON / http://wesparklesolutions.com
+| -> VERSION / 1.0.0
+|
+|---------------------------------------------------------------
+| Copyright (c) 2015 , All rights reserved.
+|---------------------------------------------------------------
+*/
+
+/*
+| -------------------------------------------------------------------
+| CONFIGURATION
+| -------------------------------------------------------------------
+*/
+define("_sys", "HZ");
+define("_version", "5.0");
+
+if(is_readable("config/config.php"))
+{
+    require_once("config/config.php");
+
+}
+else
+{
+    exit("We cannot Read the <b>configuration</b> !");
+}
+
+/*
+|---------------------------------------------------------------
+| ERROR REPORTING
+|---------------------------------------------------------------
+|
+| Different environments will require different levels of error reporting.
+| By default development will show errors but testing and prooduction will hide them.
+*/
+
+if (!empty($GLOBALS["_SETTINGS"]["ENVIRONMENT"]))
+{
+	switch (strtoupper($GLOBALS["_SETTINGS"]["ENVIRONMENT"]))
+	{
+		case 'DEVELOPMENT':
+            ini_set('display_errors', 1);
+		break;
+
+		case 'TESTING':
+            error_reporting(0);
+            ini_set('display_errors', 0);
+        break;
+
+		case 'PRODUCTION':
+			error_reporting(0);
+            ini_set('display_errors', 0);
+		break;
+
+		default:
+			exit("The application <b>Environment</b> is not set correctly !");
+        break;
+	}
+}
+
+/*
+|---------------------------------------------------------------
+| TIMEZONE
+|---------------------------------------------------------------
+*/
+if(!empty($GLOBALS["_SETTINGS"]["TIMEZONE"]))
+{
+    date_default_timezone_set($GLOBALS["_SETTINGS"]["TIMEZONE"]);
+}
+
+/*
+|---------------------------------------------------------------
+| AUTOLOAD
+|---------------------------------------------------------------
+*/
+
+if(is_readable("system/autoload.php"))
+{
+    require_once("system/autoload.php");
+
+}
+else
+{
+    exit("We cannot Read <b>autoload</b> file !");
+}
+
+$sql = strtolower($GLOBALS["_SETTINGS"]["DB"]["CLASS"]);
+if($sql == "mysqli" || $sql == "mysql")
+{
+	if (!function_exists('mysqli_connect')) {
+		header("location: plusurf.php?error=mysqli");
+	    exit();
+	}
+}
+else if($sql == "pdo")
+{
+	if (!class_exists('PDO')) {
+		header("location: plusurf.php?error=pdo");
+	    exit();
+	}
+}
+
+?>
