@@ -24,7 +24,7 @@
                                             <li><a href="<?php _router("browsing"); ?>" ><i class="icon fa-exchange" ></i> <?php _l("browsing"); ?></a></li>
                                             <li><a href="<?php _router("dashboard"); ?>" ><i class="icon fa-dashboard" ></i> <?php _l("dashboard"); ?></a></li>
                                             <li><a href="<?php _router("websites"); ?>" ><i class="icon fa-globe" ></i> <?php _l("my_websites"); ?></a></li>
-                                            <li><a href="<?php _router("referrals"); ?>" ><i class="icon fa-users" ></i> <?php _l("referrals"); ?></a></li>
+                                            <!-- li><a href="<?php _router("referrals"); ?>" ><i class="icon fa-users" ></i> <?php _l("referrals"); ?></a><li-->
                                             <li><a href="<?php _router("payments"); ?>" ><i class="icon fa-shopping-cart" ></i> <?php _l("buy"); ?></a></li>
                                             <?php
                                             $pname = u("provider_name");

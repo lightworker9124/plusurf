@@ -55,6 +55,7 @@ class Upgrade extends BaseModel
 	
 	public static function up($userid, $traffic_ratio, $websites, $sessions, $time)
 	{
+
 		Db::bind("uid", strip_tags($userid));
 		Db::bind("tratio", strip_tags($traffic_ratio));
 		Db::bind("webslots", strip_tags($websites));

@@ -1025,6 +1025,7 @@ class User extends BaseController
 
 	public function twocheckout_payment_process($match="")
 	{
+
 		if(!Auth::check("users"))
 		{
 			define("alert_error", l("error_login_error"));
@@ -1147,6 +1148,7 @@ class User extends BaseController
 				{
 					if($plan["type"]=="upgrade")
 					{
+
 						if(Upgrade::up(u("id"), $plan["traffic_ratio"], $plan["website_slots"], $plan["session_slots"], $plan["duration"]))
 						{
 							define("alert_success", l("payment_completed_hint"));
