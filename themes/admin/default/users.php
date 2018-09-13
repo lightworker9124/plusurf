@@ -50,7 +50,7 @@
 			<a class="btn btn-success btn-lg" id="user_<?php echo $info["id"]; ?>" href="Javascript::void(0)" onclick="change_status(<?php echo $info["id"]; ?>, 'users', 'user_<?php echo $info["id"]; ?>');" >Disable</a>
 			<?php } ?>
             <hr>
-			<?php if($info["type"]=="pro") { ?>
+			<?php if($info["type"]!="Bronze") { ?>
             <div style="display: none;" id="change_duration" >
             <input class="form-control" value="1" id="duration_number" name="duration_number" placeholder="How many..."  type="number">
 			<select class="form-control" id="duration_kind" name="plan_duration_type" >
@@ -103,8 +103,8 @@
 				  <input class="form-control" value="<?php echo $info["website_slots"]; ?>" name="edit_website_slots" placeholder="Website Slots.."  type="number">
 				</div>
 				<div class="form-group">
-				  <label class="control-label" >Session Slots</label>
-				  <input class="form-control" value="<?php echo $info["session_slots"]; ?>" name="edit_session_slots" placeholder="Session Slots.."  type="number">
+				  <label class="control-label" >Plusurf Viewer Slots</label>
+				  <input class="form-control" value="<?php echo $info["session_slots"]; ?>" name="edit_session_slots" placeholder="Plusurf Viewer Slots.."  type="number">
 				</div>
 				<div class="form-group">
 				  <label class="control-label" >Traffic Ratio</label>
@@ -171,7 +171,7 @@
 							<?php } ?>
 							</li>
                             <li>
-                            <?php if($one["type"]=="pro") { ?>
+                            <?php if($one["type"]!="Bronze") { ?>
                             <a id="upgrade_<?php echo $one["id"]; ?>" href="Javascript::void(0)" onclick="user_type(<?php echo $one["id"]; ?>, 'upgrade_<?php echo $one["id"]; ?>');" >Downgrade Account</a>
                             <?php } else { ?>
                             <a id="upgrade_<?php echo $one["id"]; ?>" href="Javascript::void(0)" onclick="user_type(<?php echo $one["id"]; ?>, 'upgrade_<?php echo $one["id"]; ?>');" >Upgrade Account</a>

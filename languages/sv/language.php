@@ -73,7 +73,7 @@ Languages::set("tos", "Villkor för Tjänsten");
 Languages::set("about_us", "Om Oss");
 Languages::set("tos_2", "TOS");
 Languages::set("privacy", "Sekretess");
-Languages::set("session_slots", "Session Slots");
+Languages::set("session_slots", "Plusurf Viewer Slots");
 Languages::set("website_slots", "Hemsida Slots");
 Languages::set("traffic_ratio", "Traffic Exchange Ratio");
 Languages::set("add_traffic_source", "Lägg till Trafik källa");

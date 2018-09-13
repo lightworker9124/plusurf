@@ -2,13 +2,13 @@
 
 /*
 |---------------------------------------------------------------
-| PHP FRAMEWORK
+| WS FRAMEWORK
 |---------------------------------------------------------------
 | 
-| -> PACKAGE / PHP FRAMEWORK
+| -> PACKAGE / WS FRAMEWORK
 | -> AUTHOR / wesparkle solutions
 | -> DATE / 2015-04-01
-| -> CODECANYON / http://wesparklesolutions.com
+| -> WEBSITE / http://wesparklesolutions.com
 | -> VERSION / 1.0.0
 |
 |---------------------------------------------------------------
@@ -24,8 +24,13 @@ class More extends BaseModel
 		if(empty($user)) { return false; }
 		Db::bind("uid", strip_tags($userid));
 		Db::bind("wslots", strip_tags($website_slots));
-		if(Db::query("UPDATE users SET `website_slots` = :wslots WHERE id = :uid"))
-		{
+
+
+        if($_SESSION['switcher']=='manual_')
+            $query= Db::query("UPDATE users SET `manual_website_slots` = :sslots WHERE id = :uid");
+        else
+            $query= Db::query("UPDATE users SET `website_slots` = :sslots WHERE id = :uid");
+        if($query){
 			return true;
 		}
 		else
@@ -40,7 +45,12 @@ class More extends BaseModel
 		if(empty($user)) { return false; }
 		Db::bind("uid", strip_tags($userid));
 		Db::bind("sslots", strip_tags($session_slots));
-		if(Db::query("UPDATE users SET `session_slots` = :sslots WHERE id = :uid"))
+
+        if($_SESSION['switcher']=='manual_')
+            $query= Db::query("UPDATE users SET `manual_session_slots` = :sslots WHERE id = :uid");
+        else
+            $query= Db::query("UPDATE users SET `session_slots` = :sslots WHERE id = :uid");
+        if($query)
 		{
 			return true;
 		}
@@ -52,12 +62,18 @@ class More extends BaseModel
 	
 	public static function traffic($userid, $points)
 	{
+
+
 		$user = Getdata::one_user(strip_tags($userid));
 		if(empty($user)) { return false; }
-		$points = $user["points"]+$points;
+		$points = $user[$_SESSION['switcher']."points"]+$points;
 		Db::bind("uid", strip_tags($userid));
 		Db::bind("points", strip_tags($points));
-		if(Db::query("UPDATE users SET `points` = :points WHERE id = :uid"))
+		if($_SESSION['switcher']=='manual_')
+		$query= Db::query("UPDATE users SET `manual_points` = :points WHERE id = :uid");
+		else
+        $query= Db::query("UPDATE users SET `points` = :points WHERE id = :uid");
+		if($query)
 		{
 			return true;
 		}
@@ -100,11 +116,14 @@ class More extends BaseModel
 	public static function remove_traffic($userid, $points)
 	{
 		$user = Getdata::one_user(strip_tags($userid));
-		$points = $user["points"]-$points;
+		$points = $user[$_SESSION['switcher']."points"]-$points;
 		Db::bind("uid", strip_tags($userid));
 		Db::bind("points", strip_tags($points));
-		if(Db::query("UPDATE users SET `points` = :points WHERE id = :uid"))
-		{
+        if($_SESSION['switcher']=='manual_')
+            $query= Db::query("UPDATE users SET `manual_points` = :points WHERE id = :uid");
+        else
+            $query= Db::query("UPDATE users SET `points` = :points WHERE id = :uid");
+        if($query){
 			return true;
 		}
 		else

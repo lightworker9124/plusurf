@@ -46,7 +46,7 @@
 								  <div style="height: 94.3px; background: #007FFF; color: #fff;" class="panel-body">
 								   <center><h2>
 									<?php $type = strtolower(u("type")); 
-									if($type=="pro")
+									if($type!="Bronze")
 									{
 										echo l("pro")." <i class='fa fa-check' ></i>";
 									}

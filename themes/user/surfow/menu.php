@@ -1,12 +1,28 @@
+
 					<header id="header" <?php if(Check::is_routed("home")) { ?> class="alt" <?php } ?> >
+
+                       <?php  if($GLOBALS["check_login"])  { ?>
+                        <div style="margin-left: 2%" >
+                        <form method="post" action="<?php _router("switcher"); ?>">
+                        <input name="switcher" id="switcher" onchange="this.form.submit()" value="manual_" class="pull-left" type="checkbox" <?php  if ($_SESSION['switcher']=='manual_') echo'checked'; ?>  data-toggle="toggle" data-on="Manual" data-off="Automatic" data-onstyle="primary"  data-height="20" data-offstyle="">
+                        </form>
+
+
+                        </div>
+                        <?php  } ?>
+                        <div hidden>
                         <?php $logo = s("generale/logo"); if(!empty($logo)) { ?>
                         <a title="<?php _s("generale/name"); ?>" style="direction: ltr; float: left; text-decoration: none;" href="<?php _router("home"); ?>" ><img style="direction: ltr; padding: 5px; width: auto; height: 48px;" src="<?php _s("generale/logo"); ?>" /></a>
                         <?php } else { ?>
                             <h1 id="logo"><a title="<?php _s("generale/name"); ?>" style="text-decoration: none;" href="<?php _router("home"); ?>" ><?php _s("generale/name"); ?></a></h1>
                         <?php } ?>
-						<nav id="nav">
+                       </div>
+                        <nav id="nav">
 							<ul>
-                                <?php if($GLOBALS["check_login"]) { ?>
+                                <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+                                <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+                               <?php if($GLOBALS["check_login"]) { ?>
                                 <li class="no-phone no-tablet" ><a href="<?php _router("browsing"); ?>" ><i class="icon fa-exchange" ></i> <?php _l("browsing"); ?></a></li>
                                 <li class="no-phone no-tablet" ><a href="<?php _router("logout"); ?>" ><i class="icon fa-power-off" ></i> <?php _l("logout"); ?></a></li>
                                 <?php } else { ?>
@@ -24,7 +40,7 @@
                                             <li><a href="<?php _router("browsing"); ?>" ><i class="icon fa-exchange" ></i> <?php _l("browsing"); ?></a></li>
                                             <li><a href="<?php _router("dashboard"); ?>" ><i class="icon fa-dashboard" ></i> <?php _l("dashboard"); ?></a></li>
                                             <li><a href="<?php _router("websites"); ?>" ><i class="icon fa-globe" ></i> <?php _l("my_websites"); ?></a></li>
-                                            <!-- li><a href="<?php _router("referrals"); ?>" ><i class="icon fa-users" ></i> <?php _l("referrals"); ?></a><li-->
+                                            <li><a href="<?php _router("referrals"); ?>" ><i class="icon fa-users" ></i> <?php _l("referrals"); ?></a></li>
                                             <li><a href="<?php _router("payments"); ?>" ><i class="icon fa-shopping-cart" ></i> <?php _l("buy"); ?></a></li>
                                             <?php
                                             $pname = u("provider_name");

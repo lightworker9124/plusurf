@@ -2,13 +2,13 @@
 
 /*
 |---------------------------------------------------------------
-| PHP FRAMEWORK
+| WS FRAMEWORK
 |---------------------------------------------------------------
 | 
-| -> PACKAGE / PHP FRAMEWORK
+| -> PACKAGE / WS FRAMEWORK
 | -> AUTHOR / wesparkle solutions
 | -> DATE / 2015-04-01
-| -> CODECANYON / http://wesparklesolutions.com
+| -> WEBSITE / http://wesparklesolutions.com
 | -> VERSION / 1.0.0
 |
 |---------------------------------------------------------------
@@ -23,6 +23,7 @@ function set($key="", $value="")
 
 function get($key)
 {
+
     return Sys::get($key);
 }
 
@@ -116,6 +117,7 @@ function u($key="")
 
 function _u($key="")
 {
+
 	echo u($key);
 }
 

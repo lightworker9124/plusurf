@@ -1,13 +1,13 @@
 <?php
 /*
 |---------------------------------------------------------------
-| PHP FRAMEWORK
+| WS FRAMEWORK
 |---------------------------------------------------------------
 | 
-| -> PACKAGE / PHP FRAMEWORK
+| -> PACKAGE / WS FRAMEWORK
 | -> AUTHOR / wesparkle solutions
 | -> DATE / 2015-04-01
-| -> CODECANYON / http://wesparklesolutions.com
+| -> WEBSITE / http://wesparklesolutions.com
 | -> VERSION / 1.0.0
 |
 |---------------------------------------------------------------
@@ -21,7 +21,7 @@
 | -------------------------------------------------------------------
 | This file specifies which systems should be loaded by default.
 |
-| In order to keep the PHP FRAMEWORK as light-weight as possible only the
+| In order to keep the WS FRAMEWORK as light-weight as possible only the
 | absolute minimal resources are loaded by default. For example,
 | the database is not connected to automatically since no assumption
 | is made regarding whether you intend to use it.  This file lets

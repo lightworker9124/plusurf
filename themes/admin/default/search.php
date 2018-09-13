@@ -281,7 +281,7 @@
 							<?php } ?>
 							</li>
                             <li>
-                            <?php if($one["type"]=="pro") { ?>
+                            <?php if($one["type"]=="Bronze") { ?>
                             <a id="upgrade_<?php echo $one["id"]; ?>" href="Javascript::void(0)" onclick="user_type(<?php echo $one["id"]; ?>, 'upgrade_<?php echo $one["id"]; ?>');" >Downgrade Account</a>
                             <?php } else { ?>
                             <a id="upgrade_<?php echo $one["id"]; ?>" href="Javascript::void(0)" onclick="user_type(<?php echo $one["id"]; ?>, 'upgrade_<?php echo $one["id"]; ?>');" >Upgrade Account</a>

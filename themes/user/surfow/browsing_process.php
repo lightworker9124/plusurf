@@ -45,6 +45,7 @@
 						var url    = data["url"];
 						var browse = data["browse"];
 						var points = data["points"];
+
 						win = win;
 						if(data["open_status"] == false)
 						{
@@ -88,7 +89,7 @@
 				}
 			}, 500);
 
-			<?php if(s("exchange/focus")=="yes") { ?>
+			<?php if($_SESSION['switcher']=="manual_") { ?>
 			var checkfocus = setInterval(function(){
 			if(win)
 			{
@@ -175,7 +176,7 @@
 								  <div style="height: 94.3px; background: #21b2a6; color: #fff;" class="panel-body">
 								   <center><h2 class="fg-white" id="realtime_points" style="word-wrap: break-word;" >
 									<?php 
-									$points = get("points"); 
+									$points = u($_SESSION['switcher']."points");
 									$expl = explode(".", $points);
 									if($points > 0)
 									{

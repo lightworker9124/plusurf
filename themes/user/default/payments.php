@@ -47,7 +47,7 @@
 							</ul>
 						</div>
 						<footer class="pricing-footer">
-							<?php if($plan["price"] > 0 && u("type")!="pro") { ?>
+							<?php if($plan["price"] > 0 && u("type")=="Bronze") { ?>
 							<a href="<?php _router("checkout", array("id" => Encryption::encode($plan["id"]))); ?>" class="select"><?php _l("choose_plan"); ?></a>
 							<?php } else { ?>
 							<a href="#" class="btn btn-success"><?php _l("youre_alerady_haveit"); ?></a>

@@ -40,7 +40,7 @@ Languages::set("buy_traffic", "Buy Traffic");
 Languages::set("upgrade_now", "Upgrade Account");
 Languages::set("buy_traffic_now", "Buy More Traffic");
 Languages::set("buy_extra_websites", "Buy Extra Website Slots");
-Languages::set("buy_extra_sessions", "Buy Extra Session Slots");
+Languages::set("buy_extra_sessions", "Buy Plusurf Viewer Slots");
 Languages::set("free", "FREE");
 Languages::set("pro", "PRO");
 Languages::set("year", "Year");
@@ -79,14 +79,14 @@ Languages::set("tos_2", "TOS");
 Languages::set("privacy", "Privacy");
 
 /* PLANS */
-Languages::set("session_slots", "Session Slots");
+Languages::set("session_slots", "Plusurf Viewer Slots");
 Languages::set("website_slots", "Website Slots");
 Languages::set("traffic_ratio", "Traffic Exchange Ratio");
 Languages::set("add_traffic_source", "Add Traffic source");
 Languages::set("youre_alerady_haveit", "You're already Have it");
 Languages::set("choose_plan", "Choose Plan");
 Languages::set("buy_traffic", "Buy Traffic");
-Languages::set("buy_sessions", "Buy More Session Slots");
+Languages::set("buy_sessions", "Buy More Plusurf Viewer Slots");
 Languages::set("buy_websites", "Buy More Website Slots");
 
 /* CHECKOUT */
@@ -316,6 +316,9 @@ Languages::set("city", "City");
 Languages::set("email", "Email");
 Languages::set("phone_number", "Phone number");
 Languages::set("ip_used", "This IP is already used in a session");
-
+//plusurf
+Languages::set("Bronze", "Bronze");
+Languages::set("Silver", "Silver");
+Languages::set("Gold", "Gold");
 
 ?>

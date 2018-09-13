@@ -1,4 +1,4 @@
-<?php include("settings.php"); ?>
+<?php include("settings.php");   ?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -228,7 +228,7 @@
 					ajax_post('update_website_form', 'update_website_alert', 1, window.location);
 				});
 
-				<?php if(u("type")!="pro" && s("exchange/source")!="yes") { ?>
+				<?php if(u("type")=="Bronze" && s("exchange/source")!="yes") { ?>
 				$('#disabled_update_content_inside').hide();
 				<?php } ?>
 
@@ -237,7 +237,7 @@
 				$('#disabled_update_content_inside3').hide();
 				<?php } ?>
 
-                <?php if(u("type")!="pro" && s("geotarget/access")!="free") { ?>
+                <?php if(u("type")=="Bronze" && s("geotarget/access")!="free") { ?>
 				$('#disabled_update_content_inside2').hide();
 				<?php } else { ?>
                 $('#gettarget-update').multiSelect();
@@ -292,7 +292,7 @@
 					e.preventDefault();
 					ajax_post('website_form', 'website_alert', 1, window.location);
 				});
-				<?php if(u("type")!="pro" && s("exchange/source")!="yes") { ?>
+				<?php if(u("type")=="Bronze" && s("exchange/source")!="yes") { ?>
 				$('#disabled_content_inside').hide();
 				<?php } ?>
 
@@ -301,7 +301,7 @@
 				$('#disabled_content_inside3').hide();
 				<?php } ?>
 
-                <?php if(u("type")!="pro" && s("geotarget/access")!="free") { ?>
+                <?php if(u("type")=="Bronze" && s("geotarget/access")!="free") { ?>
 				$('#disabled_content_inside2').hide();
 				<?php } else { ?>
                 $('#gettarget-select').multiSelect();

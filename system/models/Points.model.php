@@ -2,13 +2,13 @@
 
 /*
 |---------------------------------------------------------------
-| PHP FRAMEWORK
+| WS FRAMEWORK
 |---------------------------------------------------------------
 | 
-| -> PACKAGE / PHP FRAMEWORK
+| -> PACKAGE / WS FRAMEWORK
 | -> AUTHOR / wesparkle solutions
 | -> DATE / 2015-04-01
-| -> CODECANYON / http://wesparklesolutions.com
+| -> WEBSITE / http://wesparklesolutions.com
 | -> VERSION / 1.0.0
 |
 |---------------------------------------------------------------
@@ -31,9 +31,9 @@ class Points extends BaseModel
 		if(!empty($duration) && !empty(self::$info))
 		{
 			$u = self::$info;
-			$ratio = $u["traffic_ratio"];
+			$ratio = $u[$_SESSION['switcher']."traffic_ratio"];
 			if(empty($ratio)){ return ""; }
-			$point_per_minute = s("nochange/point");
+			$point_per_minute = 10;
 			if(empty($point_per_minute)){ return ""; }
 			$point = abs((($duration*$point_per_minute/60)*($ratio))/100);
 			return $point;
@@ -45,9 +45,9 @@ class Points extends BaseModel
 		if(!empty($duration) && !empty(self::$info))
 		{
 			$u = self::$info;
-			$ratio = $u["traffic_ratio"];
+			$ratio = $u[$_SESSION['switcher']."traffic_ratio"];
 			if(empty($ratio)){ return ""; }
-			$point_per_minute = s("nochange/point");
+			$point_per_minute = 10;
 			if(empty($point_per_minute)){ return ""; }
 			$point = abs((($duration*$point_per_minute/60)*(100-$ratio))/100);
 			return $point;
@@ -72,14 +72,14 @@ class Points extends BaseModel
 				$website = Getdata::one_active_website($wid);
 				if(!empty($website))
 				{
-					$check_sold = floor($u["points"] < 0.6);
+					$check_sold = floor($u[$_SESSION['switcher']."points"] < 0.6);
 					if($check_sold)
 					{
 						self::stop_websites($usr["id"]);
 					}
 					$id      = $u["id"];
-					$points  = self::calcul($website["duration"]);;
-					$ourp    = self::our_points($website["duration"]);
+					$points  = self::calcul($_SESSION['switcher']=='manual_'?10:6);;
+					$ourp    = self::our_points($_SESSION['switcher']=='manual_'?10:6);
 					$tpoints = $points+$ourp;
 					More::remove_traffic($website["user_id"], $tpoints);
 					More::our_traffic($ourp);
@@ -93,7 +93,11 @@ class Points extends BaseModel
 	{
 		if(!empty($user_id))
 		{
+            if($_SESSION['switcher']=='manual_')
+			$query = "UPDATE users SET `manual_points` = '0' WHERE id = :uid";
+            else
 			$query = "UPDATE users SET `points` = '0' WHERE id = :uid";
+
 			Db::bind("uid", $user_id);
 			$run = Db::query($query);
 			if($run)
@@ -137,7 +141,7 @@ class Points extends BaseModel
 			$ex = Db::query($query);
             if(!empty($ex))
             {
-                return $ex[0]["points"];
+                return $ex[0][$_SESSION['switcher']."points"];
             }
             else
             {

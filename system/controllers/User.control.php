@@ -2,13 +2,13 @@
 
 /*
 |---------------------------------------------------------------
-| PHP FRAMEWORK
+| WS FRAMEWORK
 |---------------------------------------------------------------
 |
-| -> PACKAGE / PHP FRAMEWORK
+| -> PACKAGE / WS FRAMEWORK
 | -> AUTHOR / wesparkle solutions
 | -> DATE / 2015-04-01
-| -> CODECANYON / http://wesparklesolutions.com
+| -> WEBSITE / http://wesparklesolutions.com
 | -> VERSION / 1.0.0
 |
 |---------------------------------------------------------------
@@ -82,13 +82,15 @@ class User extends BaseController
 			"callback"  => router("payza_payment_process"),
 			"cancel"    => router("payments")."?cancel=true"
 			));
-			if(u("type")=="pro")
+			if(u("type")!="Bronze")
 			{
 				if(u("pro_exp") < time())
 				{
 					Upgrade::down(u("id"), s("defaults/traffic_ratio"), s("defaults/website_slots"), s("defaults/session_slots"));
+					Upgrade::manual_down(u("id"), 80, 5, 1);
 				}
 			}
+
 			$check_sold = floor(u("points") > 0.6);
 			if($check_sold)
 			{
@@ -217,6 +219,7 @@ class User extends BaseController
                 $user = Getdata::one_user($uid);
                 Exchange::info($user);
                 $run = Exchange::run($sid);
+
             }
         }
         header('Content-Type: application/json');
@@ -688,14 +691,17 @@ class User extends BaseController
 						if(!$remove) { header("location: ".router("payments")."?cancel=true&error=removesold"); exit(); }
 						if($plan["type"]=="upgrade")
 						{
-							if(Upgrade::up(u("id"), $plan["traffic_ratio"], $plan["website_slots"], $plan["session_slots"], $plan["duration"]))
+
+							if(Upgrade::up(u("id") ,$plan["name"],$plan["traffic_ratio"], $plan["website_slots"], $plan["session_slots"], $plan["duration"]))
 							{
+                                More::traffic(u("id"), $plan["points"]);
 								header("location: ".router("payments")."?success=true");
 							}
 							else
 							{
 								header("location: ".router("payments")."?success=false");
 							}
+
 						}
 						else if($plan["type"]=="websites")
 						{
@@ -823,16 +829,20 @@ class User extends BaseController
 					$query = "INSERT INTO payments(`user_id`, `plan_id`, `kind`, `payment_id`, `amount`, `currency`, `ip`, `confirmed`, `payment_service`, `payment_info`, `status`, `created_at`, `updated_at`) VALUES(:user_id, :plan_id, :kind, :payment_id, :amount, :currency, :ip, :confirmed, :service, :info, :status, :cat, :uat)";
 					if(Db::query($query))
 					{
+
+
 						if($plan["type"]=="upgrade")
 						{
-							if(Upgrade::up(u("id"), $plan["traffic_ratio"], $plan["website_slots"], $plan["session_slots"], $plan["duration"]))
+							if(Upgrade::up(u("id"),$plan["name"], $plan["traffic_ratio"], $plan["website_slots"], $plan["session_slots"], $plan["duration"]))
 							{
+                                More::traffic(u("id"), $plan["points"]);
 								header("location: ".router("payments")."?success=true");
 							}
 							else
 							{
 								header("location: ".router("payments")."?success=false");
 							}
+
 						}
 						else if($plan["type"]=="websites")
 						{
@@ -933,14 +943,16 @@ class User extends BaseController
 					{
 						if($plan["type"]=="upgrade")
 						{
-							if(Upgrade::up(u("id"), $plan["traffic_ratio"], $plan["website_slots"], $plan["session_slots"], $plan["duration"]))
+							if(Upgrade::up(u("id"),$plan["name"], $plan["traffic_ratio"], $plan["website_slots"], $plan["session_slots"], $plan["duration"]))
 							{
+                                More::traffic(u("id"), $plan["points"]);
 								header("location: ".router("payments")."?success=true");
 							}
 							else
 							{
 								header("location: ".router("payments")."?success=false");
 							}
+
 						}
 						else if($plan["type"]=="websites")
 						{
@@ -1149,8 +1161,11 @@ class User extends BaseController
 					if($plan["type"]=="upgrade")
 					{
 
-						if(Upgrade::up(u("id"), $plan["traffic_ratio"], $plan["website_slots"], $plan["session_slots"], $plan["duration"]))
+						if(Upgrade::up(u("id"),$plan["name"], $plan["traffic_ratio"], $plan["website_slots"], $plan["session_slots"], $plan["duration"]))
 						{
+
+                                More::traffic(u("id"), $plan["points"]);
+
 							define("alert_success", l("payment_completed_hint"));
 							$this->makejson();
 							exit();
@@ -1161,6 +1176,7 @@ class User extends BaseController
 							$this->makejson();
 							exit();
 						}
+
 					}
 					else if($plan["type"]=="websites")
 					{
@@ -1278,7 +1294,9 @@ class User extends BaseController
 					{
 						if($plan["type"]=="upgrade")
 						{
-							Upgrade::up($user["id"], $plan["traffic_ratio"], $plan["website_slots"], $plan["session_slots"], $plan["duration"]);
+							Upgrade::up($user["id"],$plan["name"],$plan["traffic_ratio"], $plan["website_slots"], $plan["session_slots"], $plan["duration"]);
+                           More::traffic(u("id"), $plan["points"]);
+
 						}
 						else if($plan["type"]=="websites")
 						{
@@ -1586,7 +1604,7 @@ class User extends BaseController
 			Db::bind("duration", $duration);
             Db::bind("useragent", $useragent);
 
-            if(u("type")=="pro" || s("geotarget/access")=="free")
+            if(u("type")!="Bronze" || s("geotarget/access")=="free")
 			{
 				Db::bind("geo", $geo_targeting);
 			}
@@ -1595,7 +1613,7 @@ class User extends BaseController
 				Db::bind("geo", "[ALL]");
 			}
 
-			if(u("type")=="pro" || s("exchange/source")=="yes")
+			if(u("type")!="Bronze" || s("exchange/source")=="yes")
 			{
 				if(s("exchange/ipcheck")=="all")
 				{
@@ -1735,7 +1753,7 @@ class User extends BaseController
 			Db::bind("last_run", time());
 			Db::bind("duration", $duration);
             Db::bind("useragent", $useragent);
-            if(u("type")=="pro" || s("geotarget/access")=="free")
+            if(u("type")!="Bronze" || s("geotarget/access")=="free")
 			{
 				Db::bind("geo", $geo_targeting);
 			}
@@ -1743,7 +1761,7 @@ class User extends BaseController
 			{
 				Db::bind("geo", "[ALL]");
 			}
-			if(u("type")=="pro" || s("exchange/source")=="yes")
+			if(u("type")!="Bronze" || s("exchange/source")=="yes")
 			{
 				Db::bind("source", $source);
 			}

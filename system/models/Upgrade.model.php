@@ -2,13 +2,13 @@
 
 /*
 |---------------------------------------------------------------
-| PHP FRAMEWORK
+| WS FRAMEWORK
 |---------------------------------------------------------------
 | 
-| -> PACKAGE / PHP FRAMEWORK
+| -> PACKAGE / WS FRAMEWORK
 | -> AUTHOR / wesparkle solutions
 | -> DATE / 2015-04-01
-| -> CODECANYON / http://wesparklesolutions.com
+| -> WEBSITE / http://wesparklesolutions.com
 | -> VERSION / 1.0.0
 |
 |---------------------------------------------------------------
@@ -53,15 +53,16 @@ class Upgrade extends BaseModel
 		}
 	}
 	
-	public static function up($userid, $traffic_ratio, $websites, $sessions, $time)
+	public static function up($userid,$type, $traffic_ratio, $websites, $sessions, $time)
 	{
 
 		Db::bind("uid", strip_tags($userid));
+		Db::bind("plan", strip_tags($type));
 		Db::bind("tratio", strip_tags($traffic_ratio));
 		Db::bind("webslots", strip_tags($websites));
 		Db::bind("websessions", strip_tags($sessions));
 		Db::bind("exptime", self::export_time($time));
-		if(Db::query("UPDATE users SET `type` = 'pro', `traffic_ratio` = :tratio, `website_slots` = :webslots, `session_slots` = :websessions, `pro_exp` = :exptime WHERE id = :uid"))
+		if(Db::query("UPDATE users SET `type` = :plan, `traffic_ratio` = :tratio, `website_slots` = :webslots, `session_slots` = :websessions, `pro_exp` = :exptime WHERE id = :uid"))
 		{
 			return true;
 		}
@@ -78,7 +79,8 @@ class Upgrade extends BaseModel
 		Db::bind("webslots", strip_tags($websites));
 		Db::bind("websessions", strip_tags($sessions));
 		Db::bind("exptime", time());
-		if(Db::query("UPDATE users SET `type` = 'free', `website_slots` = :webslots, `session_slots` = :websessions, `traffic_ratio` = :tratio, `pro_exp` = :exptime WHERE id = :uid"))
+		Db::bind("plan", 'Bronze');
+		if(Db::query("UPDATE users SET `type` = :plan, `website_slots` = :webslots, `session_slots` = :websessions, `traffic_ratio` = :tratio, `pro_exp` = :exptime WHERE id = :uid"))
 		{
 			return true;
 		}
@@ -87,5 +89,22 @@ class Upgrade extends BaseModel
 			return false;
 		}
 	}
+    public static function manual_down($userid, $traffic_ratio, $websites, $sessions)
+    {
+        Db::bind("uid", strip_tags($userid));
+        Db::bind("tratio", strip_tags($traffic_ratio));
+        Db::bind("webslots", strip_tags($websites));
+        Db::bind("websessions", strip_tags($sessions));
+        Db::bind("exptime", time());
+        Db::bind("plan", 'Bronze');
+        if(Db::query("UPDATE users SET `manual_type` = :plan, `manual_website_slots` = :webslots, `manual_session_slots` = :websessions, `manual_traffic_ratio` = :tratio, `pro_exp` = :exptime WHERE id = :uid"))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
 ?>

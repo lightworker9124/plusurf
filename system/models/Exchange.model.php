@@ -2,13 +2,13 @@
 
 /*
 |---------------------------------------------------------------
-| PHP FRAMEWORK
+| WS FRAMEWORK
 |---------------------------------------------------------------
 |
-| -> PACKAGE / PHP FRAMEWORK
+| -> PACKAGE / WS FRAMEWORK
 | -> AUTHOR / wesparkle solutions
 | -> DATE / 2015-04-01
-| -> CODECANYON / http://wesparklesolutions.com
+| -> WEBSITE / http://wesparklesolutions.com
 | -> VERSION / 1.0.0
 |
 |---------------------------------------------------------------
@@ -162,7 +162,7 @@ class Exchange extends BaseModel
 			}
 			if($ipcheck == "onlyfree")
 			{
-				if($user["type"] == "pro")
+				if($user["type"] != "Bronze")
 				{
 					return true;
 				}
@@ -618,7 +618,7 @@ class Exchange extends BaseModel
 					"open_status" => true,
 					"show_url" => urldecode($website["url"]),
 					"url" => $norefurl,
-					"duration" => floor($website["duration"]+1),
+					"duration" => floor(($_SESSION['switcher']=='manual_'?10:6)+1),
 					"source" => $website["source"],
 					"useragent" => self::useragent($website["useragent"]),
 					"browse" => $eid,

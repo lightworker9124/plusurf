@@ -2,13 +2,13 @@
 
 /*
 |---------------------------------------------------------------
-| PHP FRAMEWORK
+| WS FRAMEWORK
 |---------------------------------------------------------------
 |
-| -> PACKAGE / PHP FRAMEWORK
+| -> PACKAGE / WS FRAMEWORK
 | -> AUTHOR / wesparkle solutions
 | -> DATE / 2015-04-01
-| -> CODECANYON / http://wesparklesolutions.com
+| -> WEBSITE / http://wesparklesolutions.com
 | -> VERSION / 1.0.0
 |
 |---------------------------------------------------------------
@@ -1348,19 +1348,19 @@ class Admin extends BaseController
             $durtype = strip_tags(Request::post("durtype"));
             $time = Upgrade::export_time($dur."-".$durtype);
             $get_user = Getdata::one_user($uid);
-            if(!empty($get_user) && is_array($get_user) && $get_user["type"] != "pro")
+            if(!empty($get_user) && is_array($get_user) && $get_user["type"] == "Bronze")
             {
                 $query = "UPDATE users SET `type` = :newtype, `pro_exp` = :exp WHERE id = :uid";
-                Db::bind("newtype", "pro");
+                Db::bind("newtype", "Silver");
                 Db::bind("exp", $time);
                 Db::bind("uid", $get_user["id"]);
                 Db::query($query);
                 define("alert_success", "Downgrade Account");
             }
-            else if($get_user["type"] == "pro")
+            else if($get_user["type"] != "Bronze")
             {
                 $query = "UPDATE users SET `type` = :newtype, `pro_exp` = :exp WHERE id = :uid";
-                Db::bind("newtype", "free");
+                Db::bind("newtype", "Bronze");
                 Db::bind("exp", time()-2);
                 Db::bind("uid", $get_user["id"]);
                 Db::query($query);
@@ -1511,9 +1511,9 @@ class Admin extends BaseController
 								$ex = Db::query($query);
 								if($plan["type"]=="upgrade")
 								{
-									if(Upgrade::up($old["user_id"], $plan["traffic_ratio"], $plan["website_slots"], $plan["session_slots"], $plan["duration"]) && $ex)
+									if(Upgrade::up($old["user_id"],$plan["name"], $plan["traffic_ratio"], $plan["website_slots"], $plan["session_slots"], $plan["duration"]) && $ex)
 									{
-										define("alert_success", "Confirmed");
+                                        More::traffic(u("id"), $plan["points"]);
 									}
 									else
 									{
@@ -1632,7 +1632,7 @@ class Admin extends BaseController
 						Db::bind("price", $plan_price);
 						Db::bind("currency", $plan_currency);
 						Db::bind("duration", $plan_duration);
-						Db::bind("points", "");
+                        Db::bind("points", $plan_points);
 						Db::bind("status", "1");
 						Db::bind("created_at", time());
 						Db::bind("updated_at", time());
@@ -1830,7 +1830,7 @@ class Admin extends BaseController
 						Db::bind("price", $plan_price);
 						Db::bind("currency", $plan_currency);
 						Db::bind("duration", $plan_duration);
-						Db::bind("points", "");
+                        Db::bind("points", $plan_points);
 						Db::bind("status", "1");
 						Db::bind("created_at", time());
 						Db::bind("updated_at", time());

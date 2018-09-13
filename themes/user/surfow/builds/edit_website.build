@@ -40,7 +40,7 @@
 	  </div>
 
 
-	  <div class="form-group">
+	  <div class="form-group" hidden>
 		  <label class="control-label">:limit_total_hits:</label>
 		  <div>
 			<div class="radio">
@@ -69,7 +69,7 @@
 		  </div>
 	  </div>
 
-	  <div id="disabled_update_content_inside3" >
+	  <div id="disabled_update_content_inside3" hidden>
 	  <hr>
 	  <div class="form-group" >
 		  <label class="control-label" >:lng_user_agent:</label>

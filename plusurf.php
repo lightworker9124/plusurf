@@ -1,70 +1,5 @@
-<?php
-if($_GET["error"]=="config")
-{
-    header("location: ".$_SERVER["PHP_SELF"]."?error=configuration#installation");
-}
-else if($_GET["error"]=="configuration")
-{
-    //
-}
 
-if($_GET["error"]=="connect")
-{
-    header("location: ".$_SERVER["PHP_SELF"]."?error=installation#installation");
-}
-else if($_GET["error"]=="installation")
-{
-    //
-}
-else if($_GET["error"]=="mysqli")
-{
-    //
-}
-else if($_GET["error"]=="pdo")
-{
-    //
-}
-else if($_GET["error"]=="phpversion")
-{
-    header("location: ".$_SERVER["PHP_SELF"]."?error=php#installation");
-}
-else if($_GET["error"]=="php")
-{
-    //
-}
-else if($_GET["error"]!="connect" or $_GET["error"]!="installation")
-{
-?>
 <!DOCTYPE HTML>
-<html>
-	<head>
-		<title>plusurf - Traffic exchange system</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="uploads/docs/assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="uploads/docs/assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="uploads/docs/assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="uploads/docs/assets/css/ie9.css" /><![endif]-->
-	</head>
-	<body style="background: url(uploads/docs/images/banner.jpg);background-color: #282A27; background-repeat: no-repeat;  background-size: cover; background-attachment: fixed;" >
-    <div class="top">
-        <div id="logo">
-		<h1 id="title">plusurf</h1>
-		<p>Traffic Exchange System</p>
-		</div>
-    </div>
-    <h1 style="color: #fff; text-align: center; font-size: 4em;" >plusurf</h1>
-    <p style="color: #444; text-align: center; font-size: 0.75em;" >Developed By : <a target="_blank" href="http://wesparklesolutions.com" >wesparkle solutions</a> </p>
-    <ul class="copyright">
-		<li> <center style="color:#444;" > -- Version 5.0 -- </center></li>
-	</ul>
-    </body>
-</html>
-<?php
-exit();
-}
-
-?><!DOCTYPE HTML>
 <html>
 	<head>
 		<title>plusurf - Traffic exchange system</title>
@@ -253,7 +188,7 @@ exit();
 						<li>Support multiple currencies</li>
 						<li>Integrated with <font color="blue">Paypal</font> and <font color="green">Payza</font> and <font color="black">Stripe</font></li>
 						<li>You can sell Traffic to users (<font color="red">automatic</font>) (using <font color="blue">Paypal</font> & <font color="green">Payza</font> & <font color="black">Stripe</font>)</li>
-						<li>You can sell Extra website/session slots to users (<font color="red">automatic</font>) (using <font color="blue">Paypal</font> & <font color="green">Payza</font> & <font color="black">Stripe</font>)</li>
+						<li>You can sell Extra website/Plusurf Viewer Slots to users (<font color="red">automatic</font>) (using <font color="blue">Paypal</font> & <font color="green">Payza</font> & <font color="black">Stripe</font>)</li>
 						<li>Users can Upgrade their accounts (<font color="red">automatic</font>) (using <font color="blue">Paypal</font> & <font color="green">Payza</font> & <font color="black">Stripe</font>)</li>
 					</ul>
 				</li>

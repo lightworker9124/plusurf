@@ -16,7 +16,7 @@
 				val = $(id).val();
 				if(val=="upgrade")
 				{
-					$('#plan_points').hide();
+                    $('#plan_points').show();
 					$('#plan_websites').show();
 					$('#plan_sessions').show();
 					$('#plan_ratio').show();
@@ -68,7 +68,7 @@
 				  "upgrade" => "Upgrade",
 				  "traffic" => "More Traffic",
 				  "websites" => "Website slots",
-				  "sessions" => "Session slots"
+				  "sessions" => "Plusurf Viewer Slots"
 				  ), "traffic"); ?>
 				  </select>
 				</div>
@@ -81,11 +81,11 @@
 				  <input class="form-control" value="2" name="plan_websites" placeholder="Website slots.."  type="number">
 				</div>
 				<div style="display: none" id="plan_sessions" class="form-group">
-				  <label class="control-label" >Session slots</label>
-				  <input class="form-control" value="2" name="plan_sessions" placeholder="Session slots.."  type="number">
+				  <label class="control-label" >Plusurf Viewer Slots</label>
+				  <input class="form-control" value="2" name="plan_sessions" placeholder="Plusurf Viewer Slots.."  type="number">
 				</div>
 				<div style="display: none" id="plan_ratio" class="form-group">
-				  <label class="control-label" >Traffic Ratio (max 100%)</label>
+				  <label class="control-label" >Traffic Ratio </label>
 				  <input class="form-control" value="40" name="plan_ratio" placeholder="Traffic Ratio.."  type="number">
 				</div>
 				<div class="form-group">
@@ -122,7 +122,7 @@
 				val = $(id).val();
 				if(val=="upgrade")
 				{
-					$('#plan_points').hide();
+					$('#plan_points').show();
 					$('#plan_websites').show();
 					$('#plan_sessions').show();
 					$('#plan_ratio').show();
@@ -174,7 +174,7 @@
 				  "upgrade" => "Upgrade",
 				  "traffic" => "More Traffic",
 				  "websites" => "Website slots",
-				  "sessions" => "Session slots"
+				  "sessions" => "Plusurf Viewer Slots"
 				  ), $info["type"]); ?>
 				  </select>
 				</div>
@@ -187,8 +187,8 @@
 				  <input class="form-control" value="<?php echo $info["website_slots"]; ?>" name="plan_websites" placeholder="Website slots.."  type="number">
 				</div>
 				<div style="display: none" id="plan_sessions" class="form-group">
-				  <label class="control-label" >Session slots</label>
-				  <input class="form-control" value="<?php echo $info["session_slots"]; ?>" name="plan_sessions" placeholder="Session slots.."  type="number">
+				  <label class="control-label" >Plusurf Viewer Slots</label>
+				  <input class="form-control" value="<?php echo $info["session_slots"]; ?>" name="plan_sessions" placeholder="Plusurf Viewer Slots"  type="number">
 				</div>
 				<div style="display: none" id="plan_ratio" class="form-group">
 				  <label class="control-label" >Traffic Ratio (max 100%)</label>

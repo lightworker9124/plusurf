@@ -17,7 +17,7 @@
 								  <div style="height: 94.3px; background: #21b2a6; color: #fff;" class="panel-body">
 								   <center><h2  class="fg-white"  id="realtime_points" style="word-wrap: break-word;" >
 									<?php 
-									$points = u("points"); 
+									$points = u($_SESSION['switcher']."points");
 									$expl = explode(".", $points);
 									if($points > 0)
 									{
@@ -44,14 +44,15 @@
 								  </div>
 								  <div style="height: 94.3px; background: #21b2a6; color: #fff;" class="panel-body">
 								   <center><h2 class="fg-white" >
-									<?php $type = strtolower(u("type")); 
-									if($type=="pro")
+									<?php $type =u($_SESSION['switcher'].'type');
+
+									if($type!="Bronze")
 									{
-										echo l("pro")." <i class='fa fa-check' ></i>";
+										echo l("$type")." <i class='fa fa-check' ></i>";
 									}
 									else
 									{
-										echo l("free")." <a title='".l("upgrade")."' href='".router("payments")."?upgrade=true' ><i class='fa fa-info' ></i></a>";
+										echo l("$type")." <a title='".l("upgrade")."' href='".router("payments")."?upgrade=true' ><i class='fa fa-info' ></i></a>";
 									}
 									?>
 								   </h2></center>
@@ -83,7 +84,7 @@
 									<h3 class="panel-title"><i class="icon fa-globe" ></i> <?php _l("website_slots"); ?></h3>
 								  </div>
 								  <div style="height: 94.3px; background: #21b2a6; color: #fff;" class="panel-body">
-								   <center><h2 class="fg-white" ><span id="realtime_websites" ><?php _get("websites_count"); ?></span>/<?php _u("website_slots"); ?></h2></center>
+								   <center><h2 class="fg-white" ><span id="realtime_websites" ><?php _get("websites_count"); ?></span>/<?php _u($_SESSION['switcher']."website_slots"); ?></h2></center>
 								  </div>
 								</div>
 							</div>
@@ -94,7 +95,7 @@
 									<h3 class="panel-title"><i class="icon fa-users" ></i> <?php _l("session_slots"); ?></h3>
 								  </div>
 								  <div style="height: 94.3px; background: #21b2a6; color: #fff;" class="panel-body">
-								   <center><h2 class="fg-white" ><span id="realtime_sessions" ><?php _get("sessions_count"); ?></span>/<?php _u("session_slots"); ?></h2></center>
+								   <center><h2 class="fg-white" ><span id="realtime_sessions" ><?php _get("sessions_count"); ?></span>/<?php _u($_SESSION['switcher']."session_slots"); ?></h2></center>
 								  </div>
 								</div>
 							</div>
@@ -105,7 +106,7 @@
 									<h3 class="panel-title"><i class="icon fa-exchange" ></i> <?php _l("traffic_exchange"); ?></h3>
 								  </div>
 								  <div style="height: 94.3px; background: #21b2a6; color: #fff;" class="panel-body">
-								   <center><h2 class="fg-white" ><?php _u("traffic_ratio"); ?>%</h2></center>
+								   <center><h2 class="fg-white" ><?php _u($_SESSION['switcher']."traffic_ratio"); ?>%</h2></center>
 								  </div>
 								</div>
 							</div>

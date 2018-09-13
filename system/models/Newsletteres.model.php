@@ -2,13 +2,13 @@
 
 /*
 |---------------------------------------------------------------
-| PHP FRAMEWORK
+| WS FRAMEWORK
 |---------------------------------------------------------------
 | 
-| -> PACKAGE / PHP FRAMEWORK
+| -> PACKAGE / WS FRAMEWORK
 | -> AUTHOR / wesparkle solutions
 | -> DATE / 2015-04-01
-| -> CODECANYON / http://wesparklesolutions.com
+| -> WEBSITE / http://wesparklesolutions.com
 | -> VERSION / 1.0.0
 |
 |---------------------------------------------------------------
@@ -58,15 +58,15 @@ class Newsletteres extends BaseModel
             {
                 $users = Db::query("SELECT * FROM users WHERE id > :id LIMIT :limit");
             }
-            else if($newsletter["to_group"] == "pro")
+            else if($newsletter["to_group"] != "Bronze")
             {
-                Db::bind("type", "pro");
-                $users = Db::query("SELECT * FROM users WHERE type = :type and id > :id LIMIT :limit");
+                Db::bind("type", "Bronze");
+                $users = Db::query("SELECT * FROM users WHERE type != :type and id > :id LIMIT :limit");
             }
             else
             {
-                Db::bind("type", "pro");
-                $users = Db::query("SELECT * FROM users WHERE type != :type and id > :id LIMIT :limit");
+                Db::bind("type", "Bronze");
+                $users = Db::query("SELECT * FROM users WHERE type = :type and id > :id LIMIT :limit");
             }
 			if(!empty($users) && is_array($users))
 			{
@@ -112,7 +112,7 @@ class Newsletteres extends BaseModel
 					$mail->Subject = strip_tags($newsletter["subject"]);
 					
                     //user type
-                    if($user["type"] == "pro") { $usertype = "PRO"; } else { $usertype = "FREE"; }
+                    if($user["type"] == "Bronze") { $usertype = "Bronze"; } else { $usertype = "Bronze"; }
 					// Set content
 					$mail->msgHTML(self::build_content($newsletter["content"],
 						array(
@@ -190,21 +190,21 @@ class Newsletteres extends BaseModel
                     Db::bind("type", "all");
                     $allmailed = Db::query("SELECT COUNT(id) FROM users WHERE id <= :cid");
                 }
-                else if($type == "pro")
+                else if($type != "Bronze")
                 {
-                    Db::bind("type", "pro");
-                    $allu = Db::query("SELECT COUNT(id) FROM users WHERE type = :type");
+                    Db::bind("type", "Bronze");
+                    $allu = Db::query("SELECT COUNT(id) FROM users WHERE type != :type");
                     Db::bind("cid", self::$lastid);
-                    Db::bind("type", "pro");
-                    $allmailed = Db::query("SELECT COUNT(id) FROM users WHERE id <= :cid and type = :type");
+                    Db::bind("type", "Bronze");
+                    $allmailed = Db::query("SELECT COUNT(id) FROM users WHERE id <= :cid and type != :type");
                 }
                 else
                 {
-                    Db::bind("type", "pro");
-                    $allu = Db::query("SELECT COUNT(id) FROM users WHERE type != :type");
+                    Db::bind("type", "Bronze");
+                    $allu = Db::query("SELECT COUNT(id) FROM users WHERE type = :type");
                     Db::bind("cid", self::$lastid);
-                    Db::bind("type", "pro");
-                    $allmailed = Db::query("SELECT COUNT(id) FROM users WHERE id <= :cid and type != :type");
+                    Db::bind("type", "Bronze");
+                    $allmailed = Db::query("SELECT COUNT(id) FROM users WHERE id <= :cid and type = :type");
                 }
                 $allusers = $allu[0]["COUNT(id)"];
                 $mailedusers = $allmailed[0]["COUNT(id)"];

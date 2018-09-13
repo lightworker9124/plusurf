@@ -49,7 +49,7 @@
                         </div>
                         <hr>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" hidden>
                         <label class="control-label"><?php _l("limit_total_hits"); ?></label>
                         <div>
                             <div class="radio">
@@ -76,7 +76,7 @@
                             </select>
                         </div>
                     </div>
-                    <div id="disabled_content_inside3" >
+                    <div id="disabled_content_inside3" hidden >
                         <hr>
                         <div class="form-group" >
                             <label class="control-label" ><?php _l("user_agent", "User Agent"); ?></label>

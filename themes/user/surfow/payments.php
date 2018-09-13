@@ -10,55 +10,110 @@
 		$plans = get("plans");
 		if(!empty($plans) && is_array($plans))
 		{
-			foreach($plans as $plan)
-			{
-		?>
-			<li class="exclusive">
-				<ul class="pricing-wrapper">
-					<li class="is-visible">
-						<header class="pricing-header">
-							<h2><?php echo $plan["name"]; ?></h2>
-							<div class="price">
-								<span class="currency"><?php echo $plan["currency"]; ?></span>
-								<span class="value"><?php echo $plan["price"]; ?></span>
-								<span class="duration"><?php
-							  $duration = explode("-", $plan["duration"]);
-							  
-							  switch($duration[1])
-							  {
-								  case 'd':
-									if($duration[0]>1){ echo $duration[0]." ".l("days"); } else { _l("day"); }
-								  break;
-								  case 'm':
-									if($duration[0]>1){ echo $duration[0]." ".l("months"); } else { _l("month"); }
-								  break;
-								  case 'y':
-									if($duration[0]>1){ echo $duration[0]." ".l("years"); } else { _l("year"); }
-								  break;
-							  }
-							  ?></span>
-							</div>
-						</header>
-						<div class="pricing-body">
-							<ul class="pricing-features">
-							  <li><i class="icon-check"></i> <?php _l("traffic_source"); ?> : <b class="fg-blue" ><?php $plan["name"]=='Bronze'? _l("no"):_l("yes"); ?></b></li>
-							  <li><i class="icon-check"></i> <?php _l("website_slots"); ?> : <b class="fg-blue" ><?php echo $plan["website_slots"]; ?></b></li>
-							  <li><i class="icon-check"></i> <?php _l("session_slots"); ?> : <b class="fg-blue" ><?php echo $plan["session_slots"]; ?></b></li>
-							  <li><i class="icon-check"></i> <?php _l("traffic_ratio"); ?> : <b class="fg-blue" ><?php echo $plan["traffic_ratio"]; ?> %</b></li>
-							</ul>
-						</div>
-						<footer class="pricing-footer">
-							<?php if($plan["price"] > 0 && u("type")!="pro") { ?>
-							<a href="<?php _router("checkout", array("id" => Encryption::encode($plan["id"]))); ?>" class="select"><?php _l("choose_plan"); ?></a>
-							<?php } else { ?>
-							<a href="#" class="btn btn-success"><?php _l("youre_alerady_haveit"); ?></a>
-							<?php } ?>
-						</footer>
-					</li>
-				</ul>
-			</li>
-		<?php
-			}
+            $_SESSION['switcher'] =='manual_'?$exchange_type='manual_':$exchange_type='automatic';
+			foreach($plans as $plan )
+			{if($plan['exchange_type'] ==$exchange_type  ) {
+                ?>
+                <li class="exclusive">
+                    <ul class="pricing-wrapper">
+                        <li class="is-visible">
+                            <header class="pricing-header">
+                                <h2><?php echo $plan["name"]; ?></h2>
+                                <div class="price">
+                                    <span class="currency"><?php echo $plan["currency"]; ?></span>
+                                    <span class="value"><?php echo $plan["price"]; ?></span>
+                                    <span class="duration"><?php
+                                        $duration = explode(
+                                            "-",
+                                            $plan["duration"]
+                                        );
+
+                                        switch ($duration[1]) {
+                                            case 'd':
+                                                if ($duration[0] > 1) {
+                                                    echo $duration[0]." ".l(
+                                                            "days"
+                                                        );
+                                                } else {
+                                                    _l("day");
+                                                }
+                                                break;
+                                            case 'm':
+                                                if ($duration[0] > 1) {
+                                                    echo $duration[0]." ".l(
+                                                            "months"
+                                                        );
+                                                } else {
+                                                    _l("month");
+                                                }
+                                                break;
+                                            case 'y':
+                                                if ($duration[0] > 1) {
+                                                    echo $duration[0]." ".l(
+                                                            "years"
+                                                        );
+                                                } else {
+                                                    _l("year");
+                                                }
+                                                break;
+                                        }
+                                        ?></span>
+                                </div>
+                            </header>
+                            <div class="pricing-body">
+                                <ul class="pricing-features">
+                                    <li><i class="icon-check"></i> <?php _l(
+                                            "traffic_source"
+                                        ); ?> : <b
+                                                class="fg-blue"><?php $plan["name"]
+                                            == 'Bronze'
+                                                ? _l("no")
+                                                : _l(
+                                                    "yes"
+                                                ); ?></b></li>
+                                    <li><i class="icon-check"></i> <?php _l(
+                                            "website_slots"
+                                        ); ?> : <b
+                                                class="fg-blue"><?php echo $plan["website_slots"]; ?></b>
+                                    </li>
+                                    <li><i class="icon-check"></i> <?php _l(
+                                            "session_slots"
+                                        ); ?> : <b
+                                                class="fg-blue"><?php echo $plan["session_slots"]; ?></b>
+                                    </li>
+                                    <li><i class="icon-check"></i> <?php _l(
+                                            "traffic_ratio"
+                                        ); ?> : <b
+                                                class="fg-blue"><?php echo $plan["traffic_ratio"]; ?>
+                                            %</b></li>
+                                </ul>
+                            </div>
+                            <footer class="pricing-footer">
+                                <?php if ($plan["price"] > 0
+                                    && u("type") == "Bronze") { ?>
+                                    <a href="<?php _router(
+                                        "checkout",
+                                        [
+                                            "id" => Encryption::encode(
+                                                $plan["id"]
+                                            )
+                                        ]
+                                    ); ?>" class="select"><?php _l(
+                                            "choose_plan"
+                                        ); ?></a>
+                                <?php } else { ?>
+                                    <a href="#"
+                                       class="btn btn-success"><?php _l(
+                                            "youre_alerady_haveit"
+                                        ); ?></a>
+                                <?php } ?>
+                            </footer>
+                        </li>
+                    </ul>
+                </li>
+                <?php
+            }
+            }
 		}
 		else
 		{

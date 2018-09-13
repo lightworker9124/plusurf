@@ -451,8 +451,8 @@
 				  <input class="form-control" value="<?php echo html_entity_decode(s("defaults/website_slots")); ?>" name="update_website_slots" placeholder="Website slots.."  type="number" required>
 				</div>
 				<div class="form-group">
-				  <label class="control-label" >Session slots</label>
-				  <input class="form-control" value="<?php echo html_entity_decode(s("defaults/session_slots")); ?>" name="update_session_slots" placeholder="Session slots.."  type="number" required>
+				  <label class="control-label" >Plusurf Viewer Slots</label>
+				  <input class="form-control" value="<?php echo html_entity_decode(s("defaults/session_slots")); ?>" name="update_session_slots" placeholder="Plusurf Viewer Slots.."  type="number" required>
 				</div>
 				<div class="form-group">
 				  <label class="control-label" >Traffic Ratio (max 100%)</label>
