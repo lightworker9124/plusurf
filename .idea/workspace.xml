@@ -3,85 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="cdf63d06-434d-4da4-8281-b431501f928a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/en/language.php" beforeDir="false" afterPath="$PROJECT_DIR$/languages/en/language.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/sv/language.php" beforeDir="false" afterPath="$PROJECT_DIR$/languages/sv/language.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plusurf.php" beforeDir="false" afterPath="$PROJECT_DIR$/plusurf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/autoload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/controllers/Admin.control.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/controllers/Admin.control.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/controllers/Admin_guest.control.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/controllers/Admin_guest.control.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/controllers/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/controllers/BaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/controllers/Guest.control.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/controllers/Guest.control.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/controllers/User.control.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/controllers/User.control.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/controllers/test.control.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/controllers/test.control.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/models/Ajax.model.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/models/Ajax.model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/models/BaseModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/models/BaseModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/models/Exchange.model.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/models/Exchange.model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/models/Getdata.model.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/models/Getdata.model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/models/Hits.model.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/models/Hits.model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/models/Left_time.model.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/models/Left_time.model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/models/Mail.model.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/models/Mail.model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/models/More.model.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/models/More.model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/models/Newsletteres.model.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/models/Newsletteres.model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/models/Pagination.model.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/models/Pagination.model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/models/Paypal.model.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/models/Paypal.model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/models/Payza.model.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/models/Payza.model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/models/Points.model.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/models/Points.model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/models/Referrals.model.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/models/Referrals.model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/models/Settings.model.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/models/Settings.model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/models/Social_Auth.model.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/models/Social_Auth.model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/models/USD_Convert.model.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/models/USD_Convert.model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/models/Update.model.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/models/Update.model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/system/models/Upgrade.model.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/models/Upgrade.model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/models/Usersonline.model.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/models/Usersonline.model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/models/Wallet.model.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/models/Wallet.model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/required/Auth.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/required/Auth.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/required/Check.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/required/Check.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/required/Cookie.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/required/Cookie.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/required/Curl.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/required/Curl.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/required/Db.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/required/Db.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/required/Encoding.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/required/Encoding.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/required/Encryption.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/required/Encryption.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/required/ImageResize.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/required/ImageResize.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/required/Languages.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/required/Languages.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/required/Log.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/required/Log.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/required/MailTemplate.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/required/MailTemplate.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/required/Request.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/required/Request.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/required/Router.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/required/Router.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/required/Session.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/required/Session.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/required/Setup.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/required/Setup.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/required/Sys.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/required/Sys.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/required/Sys.functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/required/Sys.functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/required/Template.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/required/Template.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/required/Upload.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/required/Upload.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/required/install.functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/required/install.functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/router.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/sessions/sess_6fd7klb5o2q6fsq9a2u718h5e7" beforeDir="false" afterPath="$PROJECT_DIR$/system/storage/sessions/sess_6fd7klb5o2q6fsq9a2u718h5e7" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/system/storage/usersonline/admins/UjpYnoIzmnJobs6kArkas7pEuoIvOgQbIz7ngSaj4HaWTMTXG-E.data" beforeDir="false" afterPath="$PROJECT_DIR$/system/storage/usersonline/admins/UjpYnoIzmnJobs6kArkas7pEuoIvOgQbIz7ngSaj4HaWTMTXG-E.data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/system/storage/usersonline/guests/KlJIJyEVUn8t2XDN-SdCWaG_BJG9cjh2gNjdUQnMgETCadVzkX4.data" beforeDir="false" afterPath="$PROJECT_DIR$/system/storage/usersonline/guests/KlJIJyEVUn8t2XDN-SdCWaG_BJG9cjh2gNjdUQnMgETCadVzkX4.data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/system/storage/usersonline/users/YulCyDOEcjKULPuMVJKPFXN-qfP8y8yVwo0G_wRmI8QU_Bqihm4.data" beforeDir="false" afterPath="$PROJECT_DIR$/system/storage/usersonline/users/YulCyDOEcjKULPuMVJKPFXN-qfP8y8yVwo0G_wRmI8QU_Bqihm4.data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/admin/default/edit_settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/admin/default/edit_settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/admin/default/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/admin/default/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/admin/default/plans.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/admin/default/plans.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/admin/default/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/admin/default/search.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/admin/default/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/admin/default/settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/admin/default/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/admin/default/users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/user/default/builds/edit_website.build" beforeDir="false" afterPath="$PROJECT_DIR$/themes/user/default/builds/edit_website.build" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/user/default/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/user/default/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/user/default/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/user/default/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/user/default/payments.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/user/default/payments.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/user/default/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/user/default/settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/user/surfow/browsing_process.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/user/surfow/browsing_process.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/user/surfow/builds/edit_website.build" beforeDir="false" afterPath="$PROJECT_DIR$/themes/user/surfow/builds/edit_website.build" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/user/surfow/builds/ss.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/user/surfow/builds/ss.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/user/surfow/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/user/surfow/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/user/surfow/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/user/surfow/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/user/surfow/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/user/surfow/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/user/surfow/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/user/surfow/menu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/user/surfow/payments.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/user/surfow/payments.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/user/surfow/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/user/surfow/settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/user/surfow/websites.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/user/surfow/websites.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -95,8 +21,8 @@
       <file leaf-file-name="User.control.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/system/controllers/User.control.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1275">
-              <caret line="89" column="60" selection-start-line="89" selection-start-column="60" selection-end-line="89" selection-end-column="60" />
+            <state relative-caret-position="431">
+              <caret line="1171" column="25" lean-forward="true" selection-start-line="1171" selection-start-column="25" selection-end-line="1171" selection-end-column="25" />
               <folding>
                 <element signature="n#payments#0;n#User#0;n#!!top" />
                 <element signature="n#checkout#0;n#User#0;n#!!top" />
@@ -106,71 +32,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Upgrade.model.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/system/models/Upgrade.model.php">
+      <file leaf-file-name="lottery.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/themes/user/surfow/lottery.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1309">
-              <caret line="91" column="34" selection-start-line="91" selection-start-column="34" selection-end-line="91" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="payments.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/user/surfow/payments.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/themes/user/surfow/menu.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="45" column="72" lean-forward="true" selection-start-line="45" selection-start-column="72" selection-end-line="45" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sys.functions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/system/required/Sys.functions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sys.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/system/required/Sys.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2261">
-              <caret line="147" column="27" selection-start-line="147" selection-start-column="27" selection-end-line="147" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Settings.model.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/system/models/Settings.model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+            <state relative-caret-position="547">
+              <caret line="103" column="46" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>die;</find>
-      <find>form-check-input</find>
-      <find>dump</find>
-      <find>logout</find>
-      <find>points</find>
-      <find>Account</find>
-      <find>Account Type</find>
       <find>statistic_points</find>
       <find>realtime</find>
       <find>$_SESSION['switcher'].</find>
@@ -180,27 +61,32 @@
       <find>focus</find>
       <find>Points</find>
       <find>==&quot;</find>
-      <find>manual</find>
       <find>6</find>
       <find>realtime_points</find>
       <find>website</find>
       <find>browsing(</find>
       <find>ajax</find>
       <find>$_SESS</find>
-      <find>icon fa-save</find>
+      <find />
       <find>realtime_progress_counter</find>
       <find>exchange_process</find>
       <find>ajax_browsing</find>
       <find>$_ses</find>
+      <find>concan</find>
+      <find>Upgrade::up</find>
+      <find>$plan[&quot;type&quot;]==</find>
+      <find>$plan[&quot;type&quot;]==&quot;upgrade&quot;</find>
+      <find>manual</find>
+      <find>youre_alerady_haveit</find>
       <find>manual_</find>
-      <find>icon fa-users</find>
+      <find>you</find>
+      <find>upgrade::up</find>
     </findStrings>
     <replaceStrings>
       <replace>surfow</replace>
       <replace>http://wesparklesolutions.com</replace>
       <replace>plusurf</replace>
       <replace />
-      <replace>WS FRAMEWORK</replace>
       <replace>WEBSITE</replace>
       <replace>==&quot;Bronze&quot;</replace>
       <replace>u($_SESSION['switcher'].</replace>
@@ -250,10 +136,11 @@
         <option value="$PROJECT_DIR$/system/models/Points.model.php" />
         <option value="$PROJECT_DIR$/themes/user/surfow/browsing_process.php" />
         <option value="$PROJECT_DIR$/system/models/Exchange.model.php" />
-        <option value="$PROJECT_DIR$/system/models/Upgrade.model.php" />
-        <option value="$PROJECT_DIR$/system/controllers/User.control.php" />
-        <option value="$PROJECT_DIR$/themes/user/surfow/payments.php" />
         <option value="$PROJECT_DIR$/themes/user/surfow/menu.php" />
+        <option value="$PROJECT_DIR$/system/controllers/User.control.php" />
+        <option value="$PROJECT_DIR$/system/models/Upgrade.model.php" />
+        <option value="$PROJECT_DIR$/themes/user/surfow/payments.php" />
+        <option value="$PROJECT_DIR$/themes/user/surfow/lottery.html" />
       </list>
     </option>
   </component>
@@ -266,7 +153,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1296" />
@@ -278,6 +165,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -332,10 +220,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="router&#9;FILE&#9;file://C:/wamp/www/plusurf/system/router.php&#10;rout&#9;FILE&#9;file://C:/wamp/www/plusurf/system/router.php&#10;edit_website&#9;FILE&#9;file://C:/wamp/www/plusurf/themes/user/surfow/builds/edit_website.build&#10;user.&#9;FILE&#9;file://C:/wamp/www/plusurf/system/controllers/User.control.php&#10;more&#9;FILE&#9;file://C:/wamp/www/plusurf/system/models/More.model.php&#10;ADMIN.&#9;FILE&#9;file://C:/wamp/www/plusurf/system/controllers/Admin.control.php&#10;Guest.&#9;FILE&#9;file://C:/wamp/www/plusurf/system/controllers/Guest.control.php&#10;user.c&#9;FILE&#9;file://C:/wamp/www/plusurf/system/controllers/User.control.php&#10;Cookie.class.php&#9;FILE&#9;file://C:/wamp/www/plusurf/system/required/Cookie.class.php&#10;Settings.model.php&#9;FILE&#9;file://C:/wamp/www/plusurf/system/models/Settings.model.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/system/storage/db" />
@@ -385,14 +273,16 @@
       <workItem from="1536784859872" duration="12890000" />
       <workItem from="1536815040114" duration="13657000" />
       <workItem from="1536861274621" duration="44000" />
+      <workItem from="1536944949539" duration="4967000" />
+      <workItem from="1537114371205" duration="3987000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65902000" />
+    <option name="totallyTimeSpent" value="74856000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -401,7 +291,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23352855" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33821377" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290938" />
@@ -433,18 +323,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/themes/user/surfow/affiliate_info.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1014" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/admin/default/edit_settings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="45" column="80" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/user/surfow/checkout.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -632,9 +510,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="65">
           <caret line="46" column="51" lean-forward="true" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="73" />
-          <folding>
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -670,9 +545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="58" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="58" />
-          <folding>
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -710,29 +582,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/controllers/User.control.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="89" column="60" selection-start-line="89" selection-start-column="60" selection-end-line="89" selection-end-column="60" />
-          <folding>
-            <element signature="n#payments#0;n#User#0;n#!!top" />
-            <element signature="n#checkout#0;n#User#0;n#!!top" />
-            <element signature="n#paypal_redirect#0;n#User#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/models/Upgrade.model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1309">
-          <caret line="91" column="34" selection-start-line="91" selection-start-column="34" selection-end-line="91" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/required/Sys.functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -743,17 +596,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/user/surfow/payments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+    <entry file="file://$USER_HOME$/Desktop/lot/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/user/surfow/menu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="45" column="72" lean-forward="true" selection-start-line="45" selection-start-column="72" selection-end-line="45" selection-end-column="72" />
+        <state relative-caret-position="935">
+          <caret line="55" column="51" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/user/surfow/payments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/models/Upgrade.model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="67" column="9" lean-forward="true" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/controllers/User.control.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="1171" column="25" lean-forward="true" selection-start-line="1171" selection-start-column="25" selection-end-line="1171" selection-end-column="25" />
+          <folding>
+            <element signature="n#payments#0;n#User#0;n#!!top" />
+            <element signature="n#checkout#0;n#User#0;n#!!top" />
+            <element signature="n#paypal_redirect#0;n#User#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/user/surfow/lottery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="103" column="46" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
         </state>
       </provider>
     </entry>

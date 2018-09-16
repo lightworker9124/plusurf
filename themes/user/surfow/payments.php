@@ -1,5 +1,5 @@
 <?php include("header.php"); ?>
-<?php include("menu.php"); ?>
+<?php include("menu.php");  $_SESSION['switcher'] =='manual_'?$exchange_type='manual_':$exchange_type='automatic'; ?>
 		<?php if($_GET["upgrade"]=="true") { ?>
         <section  class="wrapper style5">
 		<div>
@@ -10,7 +10,7 @@
 		$plans = get("plans");
 		if(!empty($plans) && is_array($plans))
 		{
-            $_SESSION['switcher'] =='manual_'?$exchange_type='manual_':$exchange_type='automatic';
+
 			foreach($plans as $plan )
 			{if($plan['exchange_type'] ==$exchange_type  ) {
                 ?>
@@ -90,7 +90,7 @@
                             </div>
                             <footer class="pricing-footer">
                                 <?php if ($plan["price"] > 0
-                                    && u("type") == "Bronze") { ?>
+                                    && u($_SESSION['switcher']."type") != $plan["name"]) { ?>
                                     <a href="<?php _router(
                                         "checkout",
                                         [
@@ -136,6 +136,7 @@
 		{
 			foreach($plans as $plan)
 			{
+            if($plan['exchange_type'] ==$exchange_type  ){
 		?>
 			<li class="exclusive">
 				<ul class="pricing-wrapper">
@@ -161,6 +162,7 @@
 			</li>
 		<?php
 			}
+			}
 		}
 		else
 		{
@@ -183,6 +185,7 @@
 		{
 			foreach($plans as $plan)
 			{
+                if($plan['exchange_type'] ==$exchange_type  ){
 		?>
 			<li class="exclusive">
 				<ul class="pricing-wrapper">
@@ -200,7 +203,7 @@
 							</ul>
 						</div>
 						<footer class="pricing-footer">
-							<?php if($plan["price"] > 0 && u("website_slots")< $plan["website_slots"]) { ?>
+							<?php if($plan["price"] > 0 && u($_SESSION['switcher']."website_slots")< $plan["website_slots"]) { ?>
 							<a href="<?php _router("checkout", array("id" => Encryption::encode($plan["id"]))); ?>" class="select"><?php _l("choose_plan"); ?></a>
 							<?php } else { ?>
 							<a href="#" class="btn btn-success"><?php _l("youre_alerady_haveit"); ?></a>
@@ -210,6 +213,8 @@
 				</ul>
 			</li>
 		<?php
+
+			}
 			}
 		}
 		else
@@ -233,6 +238,7 @@
 		{
 			foreach($plans as $plan)
 			{
+                if($plan['exchange_type'] ==$exchange_type  ){
 		?>
 			<li class="exclusive">
 				<ul class="pricing-wrapper">
@@ -250,7 +256,7 @@
 							</ul>
 						</div>
 						<footer class="pricing-footer">
-							<?php if($plan["price"] > 0 && u("session_slots")< $plan["session_slots"]) { ?>
+							<?php if($plan["price"] > 0 && u($_SESSION['switcher']."session_slots")< $plan["session_slots"]) { ?>
 							<a href="<?php _router("checkout", array("id" => Encryption::encode($plan["id"]))); ?>" class="select"><?php _l("choose_plan"); ?></a>
 							<?php } else { ?>
 							<a href="#" class="btn btn-success"><?php _l("youre_alerady_haveit"); ?></a>
@@ -260,6 +266,7 @@
 				</ul>
 			</li>
 		<?php
+			}
 			}
 		}
 		else

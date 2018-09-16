@@ -71,6 +71,9 @@ class Upgrade extends BaseModel
 			return false;
 		}
 	}
+
+
+
 	
 	public static function down($userid, $traffic_ratio, $websites, $sessions)
 	{
